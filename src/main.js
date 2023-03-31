@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mindarThree = new window.MINDAR.IMAGE.MindARThree({
       container: document.body,
-      imageTargetSrc: '../assets/targets/targets.mind',
+      imageTargetSrc: './assets/targets/targets.mind',
       maxTrack: 2,
     });
     const {renderer, scene, camera} = mindarThree;
@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     dirLightw.position.set( -5, -5, 10 );
     scene.add( dirLightw );
 
-    const phase  = await loadGLTF("../assets/phase/phase.gltf");
+    const phase  = await loadGLTF("./assets/phase/phase.gltf");
     phase.scene.scale.set(50, 100, 100);
     phase.scene.position.set(0, 0, 0);
 
-    const trap = await loadGLTF("../assets/trap/trap.gltf");
+    const trap = await loadGLTF("./assets/trap/trap.gltf");
     trap.scene.scale.set(0.5, 0.5, 0.5);
     trap.scene.position.set(-0.4, -0.4, 0);
 
